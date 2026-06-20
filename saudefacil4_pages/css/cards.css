@@ -1,0 +1,126 @@
+/* ======================================================
+   cards.css – Cards, steps e componentes visuais
+   SaúdeFácil
+   ====================================================== */
+
+/* ---------- Card padrão ---------- */
+.sf-card {
+    border: none;
+    border-radius: var(--sf-radius);
+    box-shadow: var(--sf-shadow-md);
+    background: var(--sf-white);
+    transition: transform var(--sf-transition), box-shadow var(--sf-transition);
+}
+
+.sf-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sf-shadow-lg);
+}
+
+/* Ícone dentro do card */
+.sf-card .card-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--sf-light-bg);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--sf-primary);
+    margin-bottom: 12px;
+    flex-shrink: 0;
+}
+
+/* Variante accent */
+.sf-card-accent .card-icon {
+    background: var(--sf-accent);
+    color: var(--sf-primary-d);
+}
+
+/* Card sem hover (para painéis de dados) */
+.sf-card.no-hover:hover {
+    transform: none;
+    box-shadow: var(--sf-shadow-md);
+}
+
+/* ---------- Steps (como funciona) ---------- */
+.sf-step {
+    text-align: center;
+}
+
+.sf-step-num {
+    width: 52px;
+    height: 52px;
+    background: var(--sf-primary);
+    color: var(--sf-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0 auto 14px;
+    box-shadow: 0 4px 12px rgba(11,110,79,.3);
+}
+
+/* ---------- Estatísticas (hero / painel) ---------- */
+.sf-hero-stats {
+    background: rgba(255,255,255,.12);
+    border-radius: var(--sf-radius);
+    padding: 22px 28px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+.sf-hero-stats .stat-num {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--sf-accent);
+    line-height: 1.1;
+}
+
+.sf-hero-stats .stat-label {
+    font-size: .8rem;
+    opacity: .8;
+    margin-top: 2px;
+}
+
+/* Stat card no painel admin */
+.sf-stat-card {
+    text-align: center;
+    padding: 24px 16px;
+}
+
+.sf-stat-card .stat-num {
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.sf-stat-card .stat-label {
+    font-size: .85rem;
+    color: var(--sf-muted);
+    margin-top: 4px;
+}
+
+/* ---------- Alert flash ---------- */
+.sf-flash {
+    border-radius: var(--sf-radius);
+    font-weight: 600;
+}
+
+/* ---------- Responsivo cards ---------- */
+@media (max-width: 768px) {
+    .sf-card .card-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 1.3rem;
+    }
+
+    .sf-step-num {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+    }
+}

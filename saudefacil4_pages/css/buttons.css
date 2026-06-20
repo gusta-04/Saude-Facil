@@ -1,0 +1,117 @@
+/* ======================================================
+   buttons.css – Botões, badges e status
+   SaúdeFácil
+   ====================================================== */
+
+/* ---------- Botão primário ---------- */
+.btn-sf-primary {
+    background: var(--sf-primary);
+    color: var(--sf-white);
+    border: none;
+    border-radius: var(--sf-radius-sm);
+    font-weight: 700;
+    font-family: var(--sf-font-body);
+    padding: 10px 28px;
+    transition: background var(--sf-transition), box-shadow var(--sf-transition);
+}
+
+.btn-sf-primary:hover,
+.btn-sf-primary:focus {
+    background: var(--sf-primary-d);
+    color: var(--sf-white);
+    box-shadow: 0 4px 14px rgba(11,110,79,.30);
+}
+
+.btn-sf-primary:active {
+    background: var(--sf-primary-d);
+    transform: scale(.98);
+}
+
+/* ---------- Botão accent (amarelo) ---------- */
+.btn-sf-accent {
+    background: var(--sf-accent);
+    color: var(--sf-primary-d);
+    border: none;
+    border-radius: var(--sf-radius-sm);
+    font-weight: 700;
+    font-family: var(--sf-font-body);
+    padding: 10px 28px;
+    transition: background var(--sf-transition), box-shadow var(--sf-transition);
+}
+
+.btn-sf-accent:hover,
+.btn-sf-accent:focus {
+    background: var(--sf-accent-d);
+    color: var(--sf-white);
+    box-shadow: 0 4px 14px rgba(240,165,0,.35);
+}
+
+/* ---------- Tamanhos ---------- */
+.btn-sf-primary.btn-sm,
+.btn-sf-accent.btn-sm {
+    padding: 6px 16px;
+    font-size: .85rem;
+}
+
+.btn-sf-primary.btn-lg,
+.btn-sf-accent.btn-lg {
+    padding: 13px 36px;
+    font-size: 1.05rem;
+    border-radius: var(--sf-radius);
+}
+
+/* ---------- Badges de status de consulta ---------- */
+.badge-agendada {
+    background: #d1f0e0;
+    color: var(--sf-primary);
+    font-weight: 700;
+}
+
+.badge-cancelada {
+    background: #fde8e8;
+    color: var(--sf-danger);
+    font-weight: 700;
+}
+
+.badge-realizada {
+    background: #e8f4fd;
+    color: var(--sf-info);
+    font-weight: 700;
+}
+
+/* ---------- Slot de horário (agendamento) ---------- */
+.sf-slot {
+    border: 2px solid var(--sf-border);
+    border-radius: var(--sf-radius-sm);
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background var(--sf-transition), border-color var(--sf-transition), color var(--sf-transition);
+    text-align: center;
+    color: var(--sf-primary);
+    background: var(--sf-white);
+    user-select: none;
+}
+
+.sf-slot:hover {
+    background: var(--sf-primary);
+    color: var(--sf-white);
+    border-color: var(--sf-primary);
+    box-shadow: var(--sf-shadow-sm);
+}
+
+.sf-slot.selected {
+    background: var(--sf-primary);
+    color: var(--sf-white);
+    border-color: var(--sf-primary);
+    box-shadow: var(--sf-shadow-md);
+}
+
+.sf-slot.indisponivel {
+    background: #f5f5f5;
+    color: #aaa;
+    cursor: not-allowed;
+    border-color: #e0e0e0;
+    text-decoration: line-through;
+    pointer-events: none;
+}

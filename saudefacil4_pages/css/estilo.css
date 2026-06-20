@@ -1,0 +1,28 @@
+/* ======================================================
+   estilo.css – Arquivo principal de importação
+   SaúdeFácil
+
+   Importa todos os módulos CSS na ordem correta.
+   Inclua APENAS este arquivo no <head> das páginas.
+   ====================================================== */
+
+/* 1. Variáveis, reset e tipografia */
+@import 'base.css';
+
+/* 2. Navbar e footer */
+@import 'navbar.css';
+
+/* 3. Botões, badges e slots */
+@import 'buttons.css';
+
+/* 4. Cards e componentes visuais */
+@import 'cards.css';
+
+/* 5. Formulários e inputs */
+@import 'forms.css';
+
+/* 6. Tabelas e painel admin */
+@import 'tables.css';
+
+/* 7. Hero, páginas específicas e layouts */
+@import 'pages.css';

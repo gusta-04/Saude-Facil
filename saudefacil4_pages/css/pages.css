@@ -1,0 +1,148 @@
+/* ======================================================
+   pages.css – Hero, páginas específicas e layouts
+   SaúdeFácil
+   ====================================================== */
+
+/* ---------- Hero (index) ---------- */
+.sf-hero {
+    background: linear-gradient(
+        135deg,
+        var(--sf-primary-d)  0%,
+        var(--sf-primary)    55%,
+        var(--sf-primary-l)  100%
+    );
+    color: var(--sf-white);
+    padding: 80px 0 64px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Padrão de fundo sutil */
+.sf-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+.sf-hero h1 {
+    font-family: var(--sf-font-heading);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.2;
+}
+
+.sf-hero .lead {
+    font-size: 1.15rem;
+    opacity: .92;
+    max-width: 560px;
+}
+
+/* ---------- Página: Unidades ---------- */
+.sf-unidade-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sf-unidade-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sf-unidade-card .btn {
+    margin-top: auto;
+}
+
+/* ---------- Página: Agendamento ---------- */
+.sf-agendamento-header {
+    background: var(--sf-light-bg);
+    border-radius: var(--sf-radius);
+    padding: 18px 24px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--sf-primary);
+}
+
+/* Grupo de horários por data */
+.sf-data-group {
+    margin-bottom: 28px;
+}
+
+.sf-data-group .data-titulo {
+    font-weight: 700;
+    color: var(--sf-primary);
+    font-size: 1rem;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--sf-border);
+}
+
+/* ---------- Página: Painel do paciente ---------- */
+.sf-painel-greeting {
+    padding: 24px 28px;
+    background: linear-gradient(120deg, var(--sf-primary) 0%, var(--sf-primary-l) 100%);
+    border-radius: var(--sf-radius);
+    color: var(--sf-white);
+    margin-bottom: 28px;
+}
+
+.sf-painel-greeting h2 {
+    font-family: var(--sf-font-heading);
+    color: var(--sf-white);
+    margin-bottom: 4px;
+}
+
+/* ---------- Página: Login / Cadastro ---------- */
+.sf-auth-wrapper {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+}
+
+.sf-auth-logo-area {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.sf-auth-logo-area .sf-logo-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.7rem;
+    margin: 0 auto 10px;
+    display: flex;
+}
+
+/* ---------- Empty state ---------- */
+.sf-empty-state {
+    text-align: center;
+    padding: 52px 24px;
+    color: var(--sf-muted);
+}
+
+.sf-empty-state i {
+    font-size: 3.2rem;
+    display: block;
+    margin-bottom: 14px;
+    opacity: .5;
+}
+
+.sf-empty-state p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 768px) {
+    .sf-hero {
+        padding: 48px 0 40px;
+    }
+
+    .sf-hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .sf-painel-greeting {
+        padding: 18px 20px;
+    }
+}

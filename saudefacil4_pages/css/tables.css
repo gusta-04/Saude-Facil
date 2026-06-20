@@ -1,0 +1,237 @@
+/* ======================================================
+   tables.css – Tabelas e painel administrativo
+   SaúdeFácil
+   ====================================================== */
+
+/* ---------- Tabela padrão ---------- */
+.sf-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.sf-table thead tr th {
+    background: var(--sf-primary);
+    color: var(--sf-white);
+    font-weight: 700;
+    font-size: .88rem;
+    padding: 12px 16px;
+    border: none;
+    white-space: nowrap;
+}
+
+.sf-table thead tr th:first-child {
+    border-radius: var(--sf-radius-sm) 0 0 0;
+}
+
+.sf-table thead tr th:last-child {
+    border-radius: 0 var(--sf-radius-sm) 0 0;
+}
+
+.sf-table tbody tr td {
+    padding: 11px 16px;
+    border-bottom: 1px solid #eef3f0;
+    font-size: .9rem;
+    vertical-align: middle;
+}
+
+.sf-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.sf-table tbody tr:hover {
+    background: var(--sf-light-bg);
+}
+
+/* ---------- Painel Admin – cards de métrica ---------- */
+.sf-admin-metric {
+    border: none;
+    border-radius: var(--sf-radius);
+    box-shadow: var(--sf-shadow-md);
+    padding: 24px 20px;
+    text-align: center;
+    background: var(--sf-white);
+    transition: transform var(--sf-transition), box-shadow var(--sf-transition);
+}
+
+.sf-admin-metric:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sf-shadow-lg);
+}
+
+.sf-admin-metric .metric-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 12px;
+}
+
+.sf-admin-metric .metric-icon.green  { background: #d1f0e0; color: var(--sf-primary); }
+.sf-admin-metric .metric-icon.blue   { background: #e8f4fd; color: var(--sf-info); }
+.sf-admin-metric .metric-icon.red    { background: #fde8e8; color: var(--sf-danger); }
+.sf-admin-metric .metric-icon.yellow { background: #fff8e1; color: #d99200; }
+
+.sf-admin-metric .metric-num {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.sf-admin-metric .metric-label {
+    font-size: .82rem;
+    color: var(--sf-muted);
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+/* ---------- Cards de atalho admin ---------- */
+.sf-admin-shortcut {
+    border: none;
+    border-radius: var(--sf-radius);
+    box-shadow: var(--sf-shadow-sm);
+    padding: 20px 16px;
+    text-align: center;
+    background: var(--sf-white);
+    transition: transform var(--sf-transition), box-shadow var(--sf-transition), background var(--sf-transition);
+    color: var(--sf-text);
+    text-decoration: none;
+    display: block;
+}
+
+.sf-admin-shortcut:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sf-shadow-md);
+    background: var(--sf-light-bg);
+    color: var(--sf-primary);
+}
+
+.sf-admin-shortcut .shortcut-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--sf-light-bg);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--sf-primary);
+    margin: 0 auto 10px;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 768px) {
+    .sf-table thead tr th,
+    .sf-table tbody tr td {
+        padding: 8px 10px;
+        font-size: .82rem;
+    }
+
+    .sf-admin-metric .metric-num {
+        font-size: 1.8rem;
+    }
+}
+
+/* ---------- Admin – título com ícone ---------- */
+.sf-admin-title-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--sf-primary);
+    color: var(--sf-white);
+    border-radius: var(--sf-radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* ---------- Admin – cards de métrica ---------- */
+.sf-metric-card {
+    background: var(--sf-white);
+    border: none;
+    border-radius: var(--sf-radius);
+    box-shadow: var(--sf-shadow-md);
+    padding: 20px 14px;
+    text-align: center;
+    transition: transform var(--sf-transition), box-shadow var(--sf-transition);
+}
+
+.sf-metric-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sf-shadow-lg);
+}
+
+.sf-metric-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin: 0 auto 10px;
+}
+
+.sf-metric-num {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.sf-metric-label {
+    font-size: .8rem;
+    color: var(--sf-muted);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* ---------- Admin – cards de atalho (módulos) ---------- */
+.sf-shortcut-card {
+    background: var(--sf-white);
+    border: none;
+    border-radius: var(--sf-radius);
+    box-shadow: var(--sf-shadow-md);
+    padding: 22px 16px;
+    text-align: center;
+    transition: transform var(--sf-transition), box-shadow var(--sf-transition), background var(--sf-transition);
+    cursor: pointer;
+    height: 100%;
+}
+
+.sf-shortcut-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sf-shadow-lg);
+    background: var(--sf-light-bg);
+}
+
+.sf-shortcut-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin: 0 auto 12px;
+    transition: transform var(--sf-transition);
+}
+
+.sf-shortcut-card:hover .sf-shortcut-icon {
+    transform: scale(1.08);
+}
+
+.sf-shortcut-label {
+    font-weight: 700;
+    font-size: .9rem;
+    color: var(--sf-text);
+    margin-bottom: 4px;
+}
+
+.sf-shortcut-desc {
+    font-size: .78rem;
+    color: var(--sf-muted);
+}
